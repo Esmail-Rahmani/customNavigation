@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">customNavigation</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="subject_attendance_text">Subject Attendance</string>
+    <string name="start_date_text">Start date</string>
+    <string name="end_date_text">End Date</string>
+    <string name="to_text">To</string>
+    <string name="from_text">From</string>
+    <string name="total_text">Total</string>
+    <string name="subject_text">Subjects</string>
+    <string name="enroll_no">Enroll No</string>
+    <string name="class_rank_text">Class Rank</string>
+    <string name="class_text">Class</string>
+    <string name="student_profile_text">Student Profile</string>
+    <string name="about_me_text">About Me</string>
+    <string name="curriculum_text">Curriculum</string>
+    <string name="birth_country_text">BirthCountry</string>
+    <string name="nationality_text">Nationality</string>
+    <string name="gender_text">Gender</string>
+    <string name="date_of_birth_text">Date Of Birth</string>
+    <string name="email_text">Email</string>
+
+</resources>
