@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">customNavigation</string>
+    <string name="app_name">HeratUniApp</string>
 
     <string name="open">Open</string>
     <string name="close">Close</string>
@@ -23,5 +23,31 @@
     <string name="gender_text">Gender</string>
     <string name="date_of_birth_text">Date Of Birth</string>
     <string name="email_text">Email</string>
+    <string name="title_activity_student_login">StudentLoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="view_image">View</string>
+    <string name="upload">Upload Image</string>
+    <string name="title_activity_image_view">ImageViewActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <array name="teacherName">
+        <item>Akhtar Mohammad</item>
+        <item>Kiara Adviani</item>
+        <item>Kabir Singh</item>
+        <item>Esmail Rahmani</item>
+        <item>Hussain Gawhari</item>
+        <item>Omid Nikan</item>
+        <item>Ali Nadim</item>
+    </array>
+    <string name="hello_world">Hello Square World!</string>
 
 </resources>
