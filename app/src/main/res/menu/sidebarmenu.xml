@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
-    <item
-        android:id="@+id/menu_dashboard"
-        android:icon="@drawable/ic_baseline_dashboard_24"
-        android:title="Dashboard"/>
-    <item
-        android:id="@+id/menu_student_re_registration_request"
-        android:title="Re-Registration Request"/>
+
+    
     <item
         android:id="@+id/menu_subject"
         android:icon="@drawable/ic_baseline_access_time_24"
@@ -20,34 +15,30 @@
     <item
         android:id="@+id/menu_teacher"
         android:icon="@drawable/ic_baseline_accessibility_24"
-        android:title="Teacher"/>
+        android:title="Professors"/>
     <item
-        android:id="@+id/menu_fees"
-        android:icon="@drawable/ic_baseline_attach_money_24"
-        android:title="Fees"/>
+        android:id="@+id/menu_marks"
+        android:visible="true"
+        android:icon="@drawable/ic_baseline_exam"
+        android:title="Marks and Result"/>
     <item
         android:id="@+id/menu_news"
         android:icon="@drawable/ic_baseline_fiber_new_24"
-        android:title="News"/>
+        android:title="Circular And News"/>
     <item
         android:id="@+id/menu_student_profile"
-        android:icon="@drawable/ic_baseline_fiber_new_24"
+        android:icon="@drawable/ic_baseline_profile"
         android:title="Student profile"/>
 
     <item
-        android:id="@+id/menu_calendar"
-        android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="Calendar"/>
+        android:id="@+id/menu_feedback"
+        android:icon="@drawable/ic_baseline_feedback_24"
+        android:title="Feedback"/>
 
     <item
-        android:id="@+id/menu_circular"
-        android:icon="@drawable/ic_baseline_blur_circular_24"
-        android:title="Circulator"/>
-
-    <item
-        android:id="@+id/menu_facebook"
-        android:icon="@drawable/ic_baseline_facebook_24"
-        android:title="Facebook"/>
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"/>
 
 
 </menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "57954826313",
+    "project_id": "heratuniapp-bb9bb",
+    "storage_bucket": "heratuniapp-bb9bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57954826313:android:8fbd750c24ead33483a798",
+        "android_client_info": {
+          "package_name": "com.example.customnavigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57954826313-sventi7qquqllhmr7bkhf03f2qo6k9nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaL2mHnf1w4oAddmYZzG-FfBFE2wv_mRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57954826313-sventi7qquqllhmr7bkhf03f2qo6k9nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

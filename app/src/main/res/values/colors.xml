@@ -16,4 +16,9 @@
     <color name="light_gray">#A7A4A4</color>
     <color name="red">#F44336</color>
     <color name="colorAccent">#5FF436</color>
+    <color name="textMainColor">#000000</color>
+    <color name="colorToolbar">#3474D5</color>
+    <color name="colorStatusBar">#3474D5</color>
+    <color name="colorBackground">#D6E1E8</color>
+
 </resources>

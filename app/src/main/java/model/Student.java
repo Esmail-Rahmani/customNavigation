@@ -30,6 +30,20 @@ public class Student {
         this.degree = degree;
     }
 
+    public Student(int studentId, String studentName, String[] subjects, String contactNo, String imageURI, String email, String gender, String dateOfBirth, String username, String password, String degree) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.subjects = subjects;
+        this.contactNo = contactNo;
+        this.imageURI = imageURI;
+        this.email = email;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.username = username;
+        this.password = password;
+        this.degree = degree;
+    }
+
     public String getStudentName() {
         return studentName;
     }

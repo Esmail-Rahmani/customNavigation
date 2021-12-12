@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:padding="12dp"
     android:layout_margin="0dp"
+    android:scrollbarSize="0dp"
+    android:padding="12dp"
+    android:background="@color/colorBackground"
     tools:context="fragment.AttendanceFragment">
 
     <LinearLayout
@@ -22,42 +24,56 @@
             android:textColor="@color/black"
             android:textSize="28sp" />
 
-        <Spinner
-            android:id="@+id/spinner_semester_selection"
+
+        <libs.mjn.fieldset.FieldSetView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginTop="16dp"
+            app:fsv_borderAlpha="0.75"
+            app:fsv_borderColor="@color/colorToolbar"
+            app:fsv_borderRadius="12dp"
+            app:fsv_borderWidth="3dp"
+            app:fsv_legend="Start Date"
+            app:fsv_legendColor="#C2185B"
+            app:fsv_legendPosition="left"
+            app:fsv_legendSize="16sp">
 
-        <TextView
+            <TextView
+                android:id="@+id/start_date_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/start_date_text"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </libs.mjn.fieldset.FieldSetView>
+
+        <libs.mjn.fieldset.FieldSetView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/from_text"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:layout_marginTop="16dp"
+            app:fsv_borderAlpha="0.75"
+            app:fsv_borderColor="@color/colorToolbar"
+            app:fsv_borderRadius="12dp"
+            app:fsv_borderWidth="3dp"
+            app:fsv_legend="End Date"
+            app:fsv_legendColor="@color/textMainColor"
+            app:fsv_legendPosition="left"
+            app:fsv_legendSize="16sp">
 
-        <EditText
-            android:id="@+id/start_date_attendance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/start_date_text" />
+            <TextView
+                android:id="@+id/end_date_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/end_date_text"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/to_text"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/end_date_attendance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/end_date_text"
-
-            />
+                />
+        </libs.mjn.fieldset.FieldSetView>
 
         <View
             android:layout_width="match_parent"
@@ -90,9 +106,9 @@
             android:textSize="22sp" />
 
         <LinearLayout
+            android:id="@+id/line11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/line11"/>
+            android:orientation="vertical" />
     </LinearLayout>
 </ScrollView>

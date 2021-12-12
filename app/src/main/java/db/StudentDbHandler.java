@@ -37,7 +37,7 @@ import utils.Constant;
 public class StudentDbHandler  {
     Context context;
     private String Url = Constant.BASE_URL+"studentsApi.php";
-    private String urlStudent = Constant.BASE_URL+"studentApi.php?username=";
+    private String urlStudent = Constant.BASE_URL+"studentApi.php?id=";
     ArrayList<Student> studentArrayList ;
     private Student studentObj;
 
@@ -48,14 +48,14 @@ public class StudentDbHandler  {
         studentArrayList = new ArrayList<>();
     }
 
-    public Student getStudent(String username) {
-        return findObject(username);
+    public Student getStudent(int id) {
+        return findObject(id);
     }
 
-    private Student findObject(String username) {
+    private Student findObject(int id) {
 
         for(int i = 0 ; i<=studentArrayList.size();i++ ){
-            if (username == studentArrayList.get(i).getUsername()){
+            if (id == studentArrayList.get(i).getStudentId()){
                 return studentArrayList.get(i);
             }
         }
@@ -87,8 +87,8 @@ public class StudentDbHandler  {
         AppController.getInstance().addToRequestQueue(jsonArrayRequest);
         return studentArrayList;
     }
-    public Student getStudent(String username,final StudentListAsyncResponse callBack){
-        JsonObjectRequest jsonArrayRequest = new JsonObjectRequest(Request.Method.GET, urlStudent+username, null,
+    public Student getStudent(int id,final StudentListAsyncResponse callBack){
+        JsonObjectRequest jsonArrayRequest = new JsonObjectRequest(Request.Method.GET, urlStudent+id, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -134,6 +134,7 @@ public class StudentDbHandler  {
 
     private Student setObject(JSONObject obj) {
         String studentName = null;
+        int studentId =0;
         String contactNo = null;
         String[] subjects = {"math","biology"};
         String imageURI = null;
@@ -145,7 +146,7 @@ public class StudentDbHandler  {
         String degree = null;
         try {
             studentName = obj.getString("stu_name");
-            int studentId = obj.getInt("stu_id");
+            studentId = obj.getInt("stu_id");
             contactNo = obj.getString("stu_phone");
             imageURI = obj.getString("stu_image");
             email = obj.getString("stu_email");
@@ -158,7 +159,7 @@ public class StudentDbHandler  {
             e.printStackTrace();
         }
 
-        return new Student(studentName, subjects, contactNo, imageURI, email, gender, dateOfBirth, username, password, degree);
+        return new Student(studentId,studentName, subjects, contactNo, imageURI, email, gender, dateOfBirth, username, password, degree);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

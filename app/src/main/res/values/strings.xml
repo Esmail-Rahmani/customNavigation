@@ -23,7 +23,7 @@
     <string name="gender_text">Gender</string>
     <string name="date_of_birth_text">Date Of Birth</string>
     <string name="email_text">Email</string>
-    <string name="title_activity_student_login">StudentLoginActivity</string>
+    <string name="title_activity_student_login">Herat UniApp</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -49,5 +49,8 @@
         <item>Ali Nadim</item>
     </array>
     <string name="hello_world">Hello Square World!</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="username">Username</string>
+    <string name="feedback_type">Feedback type</string>
 
 </resources>

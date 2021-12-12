@@ -7,7 +7,15 @@ public class SubjectAttendance {
     private int totalClass;
     private int attendedClass;
 
+    public SubjectAttendance(int subId, String subName, int total, int attended) {
+        this.subId = subId;
+        this.sName = subName;
+        this.totalClass = total;
+        this.attendedClass = attended;
+    }
 
+    public SubjectAttendance() {
+    }
 
     public int getSubId() {
         return subId;

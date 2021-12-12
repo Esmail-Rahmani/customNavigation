@@ -1,0 +1,153 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="categoriesTxtCategory">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#454545</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="categoriesImgCategory">
+        <item name="android:padding">13dp</item>
+    </style>
+
+    <style name="reportRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">#3b3b3b</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">13.5sp</item>
+    </style>
+
+    <style name="categoriesLnrHoldCategoryItems">
+        <item name="android:gravity">center</item>
+        <item name="android:weightSum">100</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="categoriesLnrRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="profileImageView">
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">37dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">#404040</item>
+    </style>
+
+    <style name="createPostItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="profileTextView">
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="profileLine">
+        <item name="android:layout_height">1.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#ffd3d3d3</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+    <style name="profileLinearLayout">
+        <item name="android:layout_height">51dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="cpTextViewTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="cpDialogTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">#616161</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="divarRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">#3b3b3b</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">13.5sp</item>
+    </style>
+
+
+    <style name="filterRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">#373737</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">#EEEEEE</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="divarCheckBoxStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="AppSpinnerDropDownItem" parent="Base.Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:divider">#EFEFEF</item>
+    </style>
+
+    <color name="colorPrimary">#FA9A93</color>
+    <color name="colorPrimaryDark">#913933</color>
+    <color name="textColor">#F1EEED</color>
+</resources>

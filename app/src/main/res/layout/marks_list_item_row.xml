@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/constrain_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_mark_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#435543"
+        android:foreground="@drawable/button_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/colorToolbar"
+        app:strokeWidth="2dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/course_name_marks_list"
+                android:text="@string/subject_text"
+                android:textColor="@color/textMainColor"
+                android:textAlignment="center"
+                android:layout_weight="2"
+                android:layout_marginLeft="-20dp"
+                android:textSize="18sp"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/course_credit_marks_list"
+                android:textAlignment="center"
+                android:text=" 4 "
+                android:textColor="@color/textMainColor"
+                android:textSize="18sp"
+                android:padding="5dp"/>
+            <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/max_marks_list"
+                android:textAlignment="center"
+            android:text=" 100 "
+                android:layout_weight="1"
+
+                android:textColor="@color/textMainColor"
+            android:textSize="18sp"
+            android:padding="5dp"/>
+            <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/obtain_marks_list"
+                android:textAlignment="center"
+                android:layout_weight="1"
+            android:text=" 89 "
+            android:textColor="@color/textMainColor"
+            android:textSize="18sp"
+            android:padding="5dp"/>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

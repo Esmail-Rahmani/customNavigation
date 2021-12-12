@@ -12,6 +12,11 @@ public class Subject {
     public Subject() {
     }
 
+    public Subject(String subName, int subId) {
+        this.subName = subName;
+        this.subId = subId;
+    }
+
     public String getSubName() {
         return subName;
     }

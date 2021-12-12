@@ -2,6 +2,7 @@ package adapter;
 
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,21 +80,73 @@ public class SubjectAttendanceAdapter implements ListAdapter {
 
                 }
             });
+            int cls;
             TextView title = convertView.findViewById(R.id.subject_name_row);
             title.setText(subjectData.getsName());
             TextView classes=convertView.findViewById(R.id.goal_attendance);
             TextView attended = convertView.findViewById(R.id.attended_class);
+            TextView status = convertView.findViewById(R.id.attended_status);
             donutProgress = convertView.findViewById(R.id.progress_bar_total_subjects);
             double sum = (100*subjectData.getAttendedClass())/(subjectData.getTotalClass());
             donutProgress.setText(sum+"%");
             donutProgress.setMax(100);
             donutProgress.setProgress((float) sum);
+            if (sum>=75){
+                donutProgress.setFinishedStrokeColor(Color.rgb(0,165,0));
+            }
+            else{
+                donutProgress.setFinishedStrokeColor(Color.rgb(165,0,0));
+            }
             classes.setText("Classes: "+subjectData.getTotalClass());
             attended.setText("Attendance: "+subjectData.getAttendedClass());
+
+            if (sum>75){
+                cls = getDiffrence(subjectData.getTotalClass(),subjectData.getAttendedClass());
+                if (cls==1){
+                    status.setText("status : you can have one more leave.");
+                }else if(cls==0){
+                    status.setText("status : you can't have more leave.");
+                }
+                else{
+                    status.setText("status : you can have "+cls+ " more leave.");
+                }
+            }else if(sum<75){
+                cls = getDiffrence(subjectData.getTotalClass(),subjectData.getAttendedClass());
+                if (cls==1){
+                    status.setText("status : you have to be present one more session");
+                }else if(cls==0){
+                    status.setText("status : you reached the goal");
+                }else{
+                    status.setText("status : you have to be present "+cls+ " more sessions");
+                }
+            }else {
+                status.setText("status : you reach the goal");
+            }
+
 
 
         }
         return convertView;
+    }
+
+    private int getDiffrence(int totalClass, int attendedClass) {
+        int i=0;
+        if (((double)attendedClass/totalClass)>0.75){
+            while (((double)attendedClass/totalClass)>=0.75){
+                totalClass++;
+                if (((double)attendedClass/totalClass)>0.75){
+                    i++;
+                }
+            }
+        }else
+        {
+            while (((double)attendedClass/totalClass)<=0.75){
+                totalClass++;
+                attendedClass++;
+                i++;
+            }
+        }
+        return i;
     }
 
     @Override

@@ -1,6 +1,8 @@
 package adapter;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.customnavigation.R;
 import com.example.customnavigation.TeacherViewActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,6 +23,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import model.Teacher;
+import utils.Constant;
 
 // for searcing
 public class TeachersListAdapter  extends RecyclerView.Adapter<TeachersListAdapter.MyViewHolder> implements Filterable {
@@ -43,18 +47,28 @@ public class TeachersListAdapter  extends RecyclerView.Adapter<TeachersListAdapt
 
     @Override
     public void onBindViewHolder(@NonNull TeachersListAdapter.MyViewHolder holder, int position) {
+        Picasso.get()
+                .load(Constant.IMAGE_URL + teachers.get(position).getImageURI())
+                .placeholder(R.drawable.profile_error)
+                .into(holder.profileImage);
         holder.teacherName.setText(teachers.get(position).getTeacherName());
-        holder.bookName.setText(teachers.get(position).getContactNo());
-        holder.profileImage.setImageResource(Integer.parseInt(teachers.get(position).getImageURI()));
+        holder.bookName.setText(teachers.get(position).getSubjects());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, TeacherViewActivity.class);
-                intent.putExtra("position",position);
+                intent.putExtra("teacherName",teachers.get(position).getTeacherName());
+                intent.putExtra("subject",teachers.get(position).getSubjects());
+                intent.putExtra("email",teachers.get(position).getEmail());
+                intent.putExtra("image",teachers.get(position).getImageURI());
+                intent.putExtra("phone",teachers.get(position).getContactNo());
+                intent.putExtra("dep",teachers.get(position).getDepartment());
+                intent.putExtra("degree",teachers.get(position).getDegree());
+                Log.d("test12345", "onClick: "+teachers.get(position).getDegree());
+
                 context.startActivity(intent);
             }
         });
-
     }
 
     @Override
